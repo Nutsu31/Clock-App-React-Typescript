@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
+import "./App.css";
+import DayImg from "./assets/desktop/bg-image-daytime.jpg";
+import NightImg from "./assets/desktop/bg-image-nighttime.jpg";
+import Time from "./components/Body/Time";
 
 function App() {
+  const [isDay, setIsDay] = useState("");
+  console.log(isDay);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Div isDay={isDay}>
+      <Time setIsDay={setIsDay} />
+    </Div>
   );
 }
 
 export default App;
+
+const Div = styled.div(
+  ({ isDay }: { isDay: string }) => css`
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${isDay === "evening" || isDay === "night" ? NightImg : DayImg})
+        center,
+      no-repeat;
+    background-size: cover;
+  `
+);

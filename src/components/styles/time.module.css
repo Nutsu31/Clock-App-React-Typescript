@@ -1,0 +1,168 @@
+.flexDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 165px;
+    gap :24px;
+}
+.setItemsStartWhenDetailsShow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 80px 0 0 125px;
+    transition: 0.3s ease-in-out;
+    gap :24px;
+}
+
+
+.timeFlexDiv{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.headText {
+    width: 540px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.headTextAuthor{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-top: 24px;
+}
+
+.hideTextWhenShowDetails {
+    display: none;
+}
+
+.greeting{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.dayPeriodImg {
+    margin-right: 10px;
+}
+
+.fullTime{
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 200px;
+    letter-spacing: -5px;
+    color: #FFFFFF;
+}
+
+.placeText {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 4.8px;
+    color: #FFFFFF;
+}
+
+.btn{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color:gray;
+    height: 56px;
+    width: 146px;
+    border-radius: 28px;
+    padding: 0 16px;
+    position: absolute;
+    right: 165px;
+    bottom: 0;
+
+}
+
+@media(max-width:1300px){
+    .flexDiv{
+        padding: 48px;
+        justify-content: space-between;
+    }
+    .greeting{
+        font-size: 18px;
+    }
+    .fullTime{
+        font-size: 175px;
+        line-height: 175px;
+    }
+    .placeText{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .setItemsStartWhenDetailsShow{
+        width: 100%;
+        justify-content: flex-start;
+        padding: 48px;
+    }
+    .timeFlexDiv{
+        width: 100%;
+    }
+    .btn{
+        position: static;
+        margin-top: 20px;
+    }
+}
+@media(max-width:825px){
+
+    .fullTime{
+        font-size: 150px;
+    }
+}
+@media(max-width:700px){
+    .flexDiv{
+        padding: 24px;
+    }
+    .headText{
+        width: 100%;
+    }
+    .fullTime{
+        font-size: 125px;
+    }
+}
+@media(max-width:560px){
+    .fullTime{
+        font-size: 100px;
+    }
+}
+@media(max-width:486px){
+    .fullTime{
+        font-size: 80px;
+    }
+    .greeting{
+        font-size: 14px;
+    }
+}
+
+@media(max-width:386px){
+    .setItemsStartWhenDetailsShow{
+        padding: 24px;
+    }
+}

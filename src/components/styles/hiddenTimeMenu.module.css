@@ -1,0 +1,38 @@
+.mainDiv{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.middleLineDiv{
+    width: 1px;
+    height: 252px;
+    background: #303030;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
+
+.spaceBetweenDiv{
+    margin-bottom: 32px;
+}
+
+@media(max-width:600px){
+    .hiddenMenuTextDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .spaceBetweenDiv{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .middleLineDiv{
+        display: none;
+    }
+}
